@@ -20,7 +20,7 @@ def tag_repo(tag_name):
 tag_repo(current_time)
 
 if branch_name != "master":
-    tag_repo(branch_name)
+    tag_repo("tag-" + branch_name)
 
 if len(sys.argv) > 1:
     tag_repo(sys.argv[1])
