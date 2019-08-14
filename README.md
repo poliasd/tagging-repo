@@ -3,7 +3,7 @@
 * Will create a git tag containing the current time and date.
 * If the current branch is not master will create another git tag containing the
 name of the current branch. 
-*Github doesn't allow to tag with the name of the branch, it says that the rag already exists.  That is why I added 'tag' in front of the branch name *
+_Github doesn't allow to tag with the name of the branch, it says that the rag already exists.  That is why I added 'tag' in front of the branch name_
 * If supplied with an optional parameter will also create a git tag containing the
 value of that parameter.
 * Will push all created tags to `origin`.
