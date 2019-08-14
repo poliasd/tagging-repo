@@ -1,19 +1,26 @@
 import sys
-from git import Repo
+import git
 from datetime import datetime
 
-repo = Repo(".")
+repo = git.Repo(".")
 
 branch_name = repo.active_branch.name
-
 current_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-date_tag = repo.create_tag(current_time)
-repo.remotes.origin.push(date_tag)
+
+# Accepts as a parameter the name of the tag and creates the tag if it doesn't exist.
+def tag_repo(tag_name):
+    try:
+        tag = repo.create_tag(tag_name)
+        repo.remotes.origin.push(tag)
+    except git.GitCommandError:
+        print('Tag "{}" already exists'.format(tag_name))
+    else:
+        print('Tag "{}" added.'.format(tag_name))
+
+tag_repo(current_time)
 
 if branch_name != "master":
-    branch_tag = repo.create_tag(branch_name)
-    repo.remotes.origin.push(branch_tag)
+    tag_repo(branch_name)
 
 if len(sys.argv) > 1:
-    param_tag = repo.create_tag(sys.argv[1])
-    repo.remotes.origin.push(param_tag)
+    tag_repo(sys.argv[1])
