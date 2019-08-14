@@ -8,6 +8,24 @@ _(Github doesn't allow to tag with the name of the branch, it says that the rag 
 value of that parameter.
 * Will push all created tags to `origin`.
 
+## Running as a standalone executable script
+
+For mac:
+```
+./tagging-mac [param1]
+```
+
+For windows:
+```
+tagging-win.exe [param1]
+```
+
+For linux:
+```
+./tagging-linux [param1]
+```
+
+
 ## Running the python script
 
 #### REQUIREMENTS
@@ -30,5 +48,5 @@ pip install GitPython
 #### RUNNING THE PYTHON SCRIPT
 
 ```
-python tagging.py tag-param1
+python tagging.py [tag-param1]
 ```
