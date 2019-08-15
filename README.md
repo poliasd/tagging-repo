@@ -12,17 +12,17 @@ value of that parameter.
 
 For mac:
 ```
-./tagging-mac [param1]
+./tagging-mac [experiment-tag]
 ```
 
 For windows:
 ```
-tagging-win.exe [param1]
+tagging-win.exe [experiment-tag]
 ```
 
 For linux:
 ```
-./tagging-linux [param1]
+./tagging-linux [experiment-tag]
 ```
 
 
@@ -48,5 +48,5 @@ pip install GitPython
 #### RUNNING THE PYTHON SCRIPT
 
 ```
-python tagging.py [tag-param1]
+python tagging.py [experiment-tag]
 ```
