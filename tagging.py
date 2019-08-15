@@ -12,8 +12,10 @@ def tag_repo(tag_name):
     try:
         tag = repo.create_tag(tag_name)
         repo.remotes.origin.push(tag)
-    except git.GitCommandError:
-        print('Tag "{}" already exists'.format(tag_name))
+    except git.GitCommandError as e:
+        print(str(e))
+    except Exception as e:
+    	print(str(e))    
     else:
         print('Tag "{}" added.'.format(tag_name))
 

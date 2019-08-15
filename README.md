@@ -25,6 +25,7 @@ For linux:
 ./tagging-linux [param1]
 ```
 
+_If you don't have permissions to create tags in the repo, please contact me and I will add you to the contributors._
 
 ## Running the python script
 
